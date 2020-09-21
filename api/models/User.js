@@ -13,10 +13,13 @@ module.exports = {
     //  ╠═╝╠╦╝║║║║║ ║ ║╚╗╔╝║╣ ╚═╗
     //  ╩  ╩╚═╩╩ ╩╩ ╩ ╩ ╚╝ ╚═╝╚═╝
 
-    username: { type: 'string' },
+    username: { type: 'string', unique:true, required: true },
 
     userdisplayname: { type: 'string' },
 
+    devices:{type: 'json', columnType: 'array' },
+
+    currentChallenge: {type: 'string', defaultsTo: undefined},
     //  ╔═╗╔╦╗╔╗ ╔═╗╔╦╗╔═╗
     //  ║╣ ║║║╠╩╗║╣  ║║╚═╗
     //  ╚═╝╩ ╩╚═╝╚═╝═╩╝╚═╝

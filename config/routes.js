@@ -20,6 +20,8 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': { view: 'pages/homepage' },
+  '/register':{view: 'pages/register'},
+  '/login':{view: 'pages/login'},
 
 
   /***************************************************************************
@@ -32,6 +34,9 @@ module.exports.routes = {
   * not match any of those, it is matched against static assets.             *
   *                                                                          *
   ***************************************************************************/
-
+  'get /generate-attestation-options': 'UserController.generateattestationoptions',
+  'post /verify-attestation': 'UserController.verifyattestation',
+  'get /generate-assertion-options': 'UserController.generateassertionoptions',
+  'post /verify-assertion': 'UserController.verifyassertion'
 
 };
